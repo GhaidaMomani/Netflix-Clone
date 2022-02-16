@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Header from "./components/Header";
 import Home from "./components/Home";
+import NavBar from "./components/navbar/Navbar";
 import { Routes, Route, useRoutes } from "react-router-dom";
 import FavList from "./components/MovieList";
 
@@ -36,7 +36,7 @@ const fetchData = async () => {
 
   return (
     <>
-    <Header />
+    <NavBar />
     <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/favList" element={<FavList favoriteList={favoriteList} />} />
